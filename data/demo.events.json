@@ -1,0 +1,13 @@
+[
+  {
+    "id": "0fb24d02-f966-4e77-a170-745b088837da",
+    "agentId": "demo",
+    "primitive": "think",
+    "visibility": "private",
+    "text": "hi",
+    "createdAt": "2026-04-28T15:10:05.231Z",
+    "blobId": "walrus_d32860a5-f43a-4f11-a44d-fb5609d76457",
+    "cipherHash": "86790afdeb0a72ccb2612f6c62027dae0e437e07c2cb5c02b8301cdaadb3b39e",
+    "commitmentTx": "sui_tx_4ce4d9ccaa09c066"
+  }
+]
