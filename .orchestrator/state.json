@@ -1,14 +1,15 @@
 {
   "phase": 3,
-  "loops": 1,
+  "loops": 2,
   "done": false,
   "paused": false,
-  "budgetUsed": 1,
+  "budgetUsed": 2,
   "budgetMax": 1000,
   "maxPhase": 6,
   "log": [
     "2026-04-28T15:22:03.043Z enqueue phase 2",
-    "2026-04-28T15:22:06.448Z advanced to phase 3"
+    "2026-04-28T15:22:06.448Z advanced to phase 3",
+    "2026-04-28T16:07:21.712Z enqueue phase 3"
   ],
   "tasks": {
     "p2-docs-check": {
@@ -20,6 +21,16 @@
       "status": "done",
       "updatedAt": "2026-04-28T15:22:03.059Z",
       "output": "ok\n"
+    },
+    "p3-hardening": {
+      "id": "p3-hardening",
+      "phase": 3,
+      "name": "Create receipt schema doc",
+      "command": "bash scripts/phase3-hardening.sh",
+      "required": true,
+      "status": "done",
+      "updatedAt": "2026-04-28T16:07:21.898Z",
+      "output": "phase3-hardening:ok\n"
     }
   }
 }
