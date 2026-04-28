@@ -1,0 +1,4 @@
+{
+  "roles": ["adapter", "tests", "docs", "release"],
+  "dispatch": "local-child-process"
+}
