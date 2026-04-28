@@ -1,0 +1,8 @@
+{
+  "maxConcurrentAgents": 4,
+  "maxLoopsPerRun": 10,
+  "requireTests": true,
+  "requireDocs": true,
+  "requireCommit": true,
+  "pauseOnFailure": true
+}
