@@ -1,9 +1,9 @@
 {
   "phase": 6,
-  "loops": 7,
+  "loops": 8,
   "done": false,
   "paused": false,
-  "budgetUsed": 4,
+  "budgetUsed": 5,
   "budgetMax": 1000,
   "maxPhase": 6,
   "log": [
@@ -17,7 +17,8 @@
     "2026-04-28T16:07:58.109Z advanced to phase 5",
     "2026-04-28T16:08:00.329Z enqueue phase 5",
     "2026-04-28T16:10:18.258Z enqueue phase 5",
-    "2026-04-28T16:10:25.172Z advanced to phase 6"
+    "2026-04-28T16:10:25.172Z advanced to phase 6",
+    "2026-04-28T16:10:27.195Z enqueue phase 6"
   ],
   "tasks": {
     "p2-docs-check": {
@@ -59,6 +60,16 @@
       "status": "done",
       "updatedAt": "2026-04-28T16:08:00.488Z",
       "output": "phase5-skill:ok\n"
+    },
+    "p6-release": {
+      "id": "p6-release",
+      "phase": 6,
+      "name": "Create release artifacts",
+      "command": "bash scripts/phase6-release.sh",
+      "required": true,
+      "status": "done",
+      "updatedAt": "2026-04-28T16:10:27.350Z",
+      "output": "phase6-release:ok\n"
     }
   }
 }
