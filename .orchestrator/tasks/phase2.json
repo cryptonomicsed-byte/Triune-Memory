@@ -1,0 +1,9 @@
+[
+  {
+    "id": "p2-docs-check",
+    "phase": 2,
+    "name": "Ensure Phase 2 docs exist",
+    "command": "test -f phases/PHASES.md && echo ok",
+    "required": true
+  }
+]

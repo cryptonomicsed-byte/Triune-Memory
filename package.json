@@ -9,7 +9,13 @@
     "orchestrator:dispatch": "node dist/orchestrator.js dispatch",
     "orchestrator:check": "node dist/orchestrator.js check",
     "orchestrator:advance": "node dist/orchestrator.js advance",
-    "orchestrator:run": "node dist/orchestrator.js run"
+    "orchestrator:run": "node dist/orchestrator.js run",
+    "orchestrator:init": "node dist/orchestrator.js init",
+    "orchestrator:enqueue": "node dist/orchestrator.js enqueue",
+    "orchestrator:run-once": "node dist/orchestrator.js run-once",
+    "orchestrator:status": "node dist/orchestrator.js status",
+    "orchestrator:resume": "node dist/orchestrator.js resume",
+    "orchestrator:pause": "node dist/orchestrator.js pause"
   },
   "dependencies": {
     "commander": "^12.1.0"

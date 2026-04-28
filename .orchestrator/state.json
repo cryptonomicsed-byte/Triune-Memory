@@ -1,27 +1,11 @@
 {
-  "phase": 7,
-  "loops": 5,
-  "done": true,
-  "log": [
-    "plan: phase 2",
-    "dispatch: spawned workers for phase 2",
-    "check: validation pass required for phase 2",
-    "advance: moved to phase 3",
-    "plan: phase 3",
-    "dispatch: spawned workers for phase 3",
-    "check: validation pass required for phase 3",
-    "advance: moved to phase 4",
-    "plan: phase 4",
-    "dispatch: spawned workers for phase 4",
-    "check: validation pass required for phase 4",
-    "advance: moved to phase 5",
-    "plan: phase 5",
-    "dispatch: spawned workers for phase 5",
-    "check: validation pass required for phase 5",
-    "advance: moved to phase 6",
-    "plan: phase 6",
-    "dispatch: spawned workers for phase 6",
-    "check: validation pass required for phase 6",
-    "advance: moved to phase 7"
-  ]
+  "phase": 2,
+  "loops": 0,
+  "done": false,
+  "paused": false,
+  "budgetUsed": 0,
+  "budgetMax": 1000,
+  "maxPhase": 6,
+  "log": [],
+  "tasks": {}
 }
