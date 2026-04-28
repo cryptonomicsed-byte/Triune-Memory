@@ -1,7 +1,7 @@
 {
-  "phase": 6,
-  "loops": 8,
-  "done": false,
+  "phase": 7,
+  "loops": 9,
+  "done": true,
   "paused": false,
   "budgetUsed": 5,
   "budgetMax": 1000,
@@ -18,7 +18,12 @@
     "2026-04-28T16:08:00.329Z enqueue phase 5",
     "2026-04-28T16:10:18.258Z enqueue phase 5",
     "2026-04-28T16:10:25.172Z advanced to phase 6",
-    "2026-04-28T16:10:27.195Z enqueue phase 6"
+    "2026-04-28T16:10:27.195Z enqueue phase 6",
+    "2026-04-28T16:11:00.221Z enqueue phase 6",
+    "2026-04-28T16:11:06.414Z advanced to phase 7",
+    "2026-04-28T16:11:06.414Z done",
+    "2026-04-28T16:32:45.716Z paused by operator",
+    "2026-04-28T16:32:47.447Z resumed by operator"
   ],
   "tasks": {
     "p2-docs-check": {
