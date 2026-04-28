@@ -1,0 +1,3 @@
+[
+  {"id":"p5-runbook","phase":5,"name":"Create autoloop runbook","command":"bash scripts/phase5-skill.sh","required":true}
+]

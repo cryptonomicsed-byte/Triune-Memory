@@ -1,0 +1,3 @@
+[
+  {"id":"p3-hardening","phase":3,"name":"Create receipt schema doc","command":"bash scripts/phase3-hardening.sh","required":true}
+]
