@@ -16,7 +16,8 @@
     "orchestrator:status": "node dist/orchestrator.js status",
     "orchestrator:resume": "node dist/orchestrator.js resume",
     "orchestrator:pause": "node dist/orchestrator.js pause",
-    "test:smoke": "bash test/orchestrator-smoke.sh"
+    "test:smoke": "bash test/orchestrator-smoke.sh",
+    "test:waggle-snapshot": "node test/waggle-snapshot-smoke.mjs"
   },
   "dependencies": {
     "commander": "^12.1.0"
