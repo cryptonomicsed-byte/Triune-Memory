@@ -17,10 +17,12 @@
     "orchestrator:resume": "node dist/orchestrator.js resume",
     "orchestrator:pause": "node dist/orchestrator.js pause",
     "test:smoke": "bash test/orchestrator-smoke.sh",
-    "test:waggle-snapshot": "node test/waggle-snapshot-smoke.mjs"
+    "test:waggle-snapshot": "node test/waggle-snapshot-smoke.mjs",
+    "test:nostr-wire": "node --test test/nostr-wire.test.mjs"
   },
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "organism-core": "github:cryptonomicsed-byte/organism-core#claude/nostr-wire-integration"
   },
   "devDependencies": {
     "typescript": "^5.6.3",
