@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "commander": "^12.1.0",
-    "organism-core": "github:cryptonomicsed-byte/organism-core#claude/nostr-wire-integration"
+    "organism-core": "github:cryptonomicsed-byte/organism-core#main"
   },
   "devDependencies": {
     "typescript": "^5.6.3",
