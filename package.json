@@ -18,7 +18,9 @@
     "orchestrator:pause": "node dist/orchestrator.js pause",
     "test:smoke": "bash test/orchestrator-smoke.sh",
     "test:waggle-snapshot": "node test/waggle-snapshot-smoke.mjs",
-    "test:nostr-wire": "node --test test/nostr-wire.test.mjs"
+    "test:nostr-wire": "node --test test/nostr-wire.test.mjs",
+    "test:sse-subscriber": "node --test test/sse-subscriber.test.mjs",
+    "oso:subscribe": "node dist/sse-subscribe-cli.js"
   },
   "dependencies": {
     "commander": "^12.1.0",
