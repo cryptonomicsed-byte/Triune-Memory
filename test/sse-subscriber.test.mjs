@@ -16,15 +16,36 @@ import { join } from 'node:path';
 import { TriuneSseSubscriber, parseSseData, iterateSseEvents } from '../dist/sse-subscriber.js';
 import { TriuneMemory } from '../dist/engine.js';
 import { LocalStore } from '../dist/store.js';
-import { WalrusAdapter, SealAdapter, SuiCommitAdapter } from '../dist/adapters.js';
+
+/**
+ * Recording test-double for the bridge. It does NOT fake storage — it records
+ * what the subscriber asked to write and returns a plain MemoryEvent so the
+ * engine's local-cache path can be asserted. The REAL storage (minipae ->
+ * NIP-AE -> relay) is proven separately by test/test_triune_bridge.py.
+ */
+class RecordingBridge {
+  constructor() { this.writes = []; }
+  writeMemory(input) {
+    this.writes.push(input);
+    return {
+      id: `rec-${this.writes.length}`,
+      agentId: input.agentId,
+      primitive: input.primitive,
+      visibility: input.visibility,
+      text: input.text,
+      tool: input.tool,
+      params: input.params,
+      createdAt: new Date().toISOString(),
+    };
+  }
+  recall() { return []; }
+}
 
 function freshMemory() {
   const dir = mkdtempSync(join(tmpdir(), 'triune-sse-test-'));
   const memory = new TriuneMemory(
     new LocalStore(dir),
-    new WalrusAdapter(),
-    new SealAdapter(),
-    new SuiCommitAdapter(),
+    new RecordingBridge(),
   );
   return { memory, dir };
 }

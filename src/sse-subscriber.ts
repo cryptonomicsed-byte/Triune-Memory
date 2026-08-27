@@ -33,7 +33,7 @@
 
 import { TriuneMemory } from './engine.js';
 import { LocalStore } from './store.js';
-import { WalrusAdapter, SealAdapter, SuiCommitAdapter } from './adapters.js';
+import { MinipaeBridge } from './minipae-bridge.js';
 
 export interface KernelEvent {
   type: string;
@@ -175,9 +175,7 @@ export class TriuneSseSubscriber {
 export function defaultSubscriber(kernelUrl: string, dataDir: string): TriuneSseSubscriber {
   const memory = new TriuneMemory(
     new LocalStore(dataDir),
-    new WalrusAdapter(),
-    new SealAdapter(),
-    new SuiCommitAdapter(),
+    new MinipaeBridge(),
   );
   return new TriuneSseSubscriber(memory, { kernelUrl });
 }

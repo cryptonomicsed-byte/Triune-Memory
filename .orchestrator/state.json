@@ -23,7 +23,11 @@
     "2026-04-28T16:11:06.414Z advanced to phase 7",
     "2026-04-28T16:11:06.414Z done",
     "2026-04-28T16:32:45.716Z paused by operator",
-    "2026-04-28T16:32:47.447Z resumed by operator"
+    "2026-04-28T16:32:47.447Z resumed by operator",
+    "2026-08-27T21:47:05.015Z paused by operator",
+    "2026-08-27T21:47:06.105Z resumed by operator",
+    "2026-08-27T21:48:31.033Z paused by operator",
+    "2026-08-27T21:48:31.960Z resumed by operator"
   ],
   "tasks": {
     "p2-docs-check": {

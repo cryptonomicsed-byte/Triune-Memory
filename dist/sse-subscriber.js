@@ -32,7 +32,7 @@
 // here.
 import { TriuneMemory } from './engine.js';
 import { LocalStore } from './store.js';
-import { WalrusAdapter, SealAdapter, SuiCommitAdapter } from './adapters.js';
+import { MinipaeBridge } from './minipae-bridge.js';
 const UNKNOWN_AGENT = 'kernel-unattributed';
 /** Parses one SSE frame's `data:` lines into a KernelEvent, or null for non-data frames (e.g. keep-alives). */
 export function parseSseData(rawEvent) {
@@ -141,6 +141,6 @@ export class TriuneSseSubscriber {
     }
 }
 export function defaultSubscriber(kernelUrl, dataDir) {
-    const memory = new TriuneMemory(new LocalStore(dataDir), new WalrusAdapter(), new SealAdapter(), new SuiCommitAdapter());
+    const memory = new TriuneMemory(new LocalStore(dataDir), new MinipaeBridge());
     return new TriuneSseSubscriber(memory, { kernelUrl });
 }
