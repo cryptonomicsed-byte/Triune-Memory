@@ -144,3 +144,13 @@ export function defaultSubscriber(kernelUrl, dataDir) {
     const memory = new TriuneMemory(new LocalStore(dataDir), new MinipaeBridge());
     return new TriuneSseSubscriber(memory, { kernelUrl });
 }
+// TODO(multi-agent-safety): TriuneSseSubscriber is not safe for concurrent
+// use from multiple TriuneSseSubscriber instances sharing the same LocalStore
+// directory.  LocalStore's loadAgents/saveEvents calls are synchronous
+// read-modify-write cycles with no filesystem lock, so two subscribers racing
+// on the same dataDir can corrupt the agent registry or drop memory events.
+// For single-owner-steward deployments (one subscriber, one kernel) this is
+// not a problem.  To support concurrent multi-agent or multi-subscriber
+// deployments, replace LocalStore with a write-serialising wrapper (e.g. an
+// append-only NDJSON file + an async mutex, or a SQLite WAL store) before
+// enabling more than one subscriber process against the same dataDir.
